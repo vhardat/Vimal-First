@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My first Github change</title>
+    <title>My first jQuery</title>
 	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"> </script>
+	<script>
+		$(document).ready(function(){
+			
+			$("#hide").click(function() {
+				$("#box").hide(5000);
+			});
+			
+			$("#show").click(function() {
+				$("#box").show(5000);
+			});
+			
+			$("#slideup").click(function() {
+				$("#box").slideUp(5000);
+			});
+			
+			$("#slidedown").click(function() {
+				$("#box").slideDown(5000);
+			});
+			
+			$("#toggle").click(function() {
+				$("#box").toggle(5000);
+			});
+			
+		});
+	</script>
+	
+	<style>
+		#box {
+			width: 400px;
+			height: 300px;
+			background: cornflowerblue;
+			}
+			
+	</style>
 </head>
 <body>
-	<h1>My First Github file</h1>
-	<p>Testing a change</p>
-	<p>Added this on website</p>
+	<h1>jQuery test</h1>
+	
+	<ul>
+		<li id="hide"><a href="#">Hide</a></li>
+		<li id="show"><a href="#">Show</a></li>
+		<li id="slideup"><a href="#">SlideUp</a></li>
+		<li id="slidedown"><a href="#">SlideDown</a></li>
+		<li id="toggle"><a href="#">Toggle</a></li>
+	</ul>
+	<p>BUTTONS HERE</p>
+	
+	<div id="box">This is to test</div>
+	
 </body>
 </html>
